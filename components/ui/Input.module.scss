@@ -1,0 +1,46 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  & label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  & > div {
+    display: flex;
+    border: thin solid var(--color-grey-200);
+    border-radius: 8px;
+    border-collapse: separate;
+
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:nth-child(1) {
+        padding-left: 16px;
+      }
+      &:nth-last-child(1) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  & input {
+    flex: 1;
+    padding: 9px 16px;
+    border: thin solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+}
+
+.block {
+  width: 100%;
+}

@@ -1,0 +1,29 @@
+.root {
+  width: fit-content;
+  position: relative;
+
+  @media (max-width: 960px) {
+    img {
+      width: 200px;
+    }
+  }
+
+  & > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    & > button {
+      width: 32px;
+      height: 32px;
+
+      & > svg {
+        color: white !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.root {
+  padding: 13px 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-yellow-500);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+// Variants
+.block {
+  width: 100%;
+}
+
+.outlined {
+  background: none;
+  border: thin solid var(--color-yellow-500);
+}
+
+.text {
+  background: transparent;
+}
+
+.icon {
+  width: fit-content;
+  height: fit-content;
+  padding: 13px;
+  border-radius: 50%;
+}
+
+// Corners
+.square {
+  border-radius: 0;
+}

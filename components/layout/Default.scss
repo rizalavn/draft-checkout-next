@@ -1,0 +1,619 @@
+hr {
+  width: 100%;
+  border-color: #f2f2f2;
+  opacity: 0.2;
+}
+
+// Header
+.header {
+  display: flex;
+  padding: 20px 60px;
+  justify-content: space-between;
+  border-bottom: 1px solid #f2f2f2;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    background: #fafbfc;
+    border: none;
+  }
+}
+
+.shopInfo {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    margin-right: 16px;
+  }
+
+  &__brandName {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__info {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #999999;
+  }
+}
+
+.poweredBy {
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999999;
+    margin-right: 16px;
+
+    @media only screen and (max-width: 768px) {
+      margin-right: 0;
+    }
+  }
+
+  &__avanaLogo {
+    @media only screen and (max-width: 768px) {
+      width: 60px;
+    }
+  }
+}
+
+// Body
+.sectionWrapper {
+  display: flex;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.productSummary {
+  padding: 20px 60px;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & button {
+      background: transparent;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 20px;
+  }
+
+  &__spanIcon {
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    cursor: pointer;
+  }
+}
+
+.productContainer {
+  display: flex;
+  padding: 32px 0 24px;
+  border-bottom: 2px solid #f2f2f2;
+
+  &__slider {
+    width: 320px;
+    height: 320px;
+
+    @media only screen and (max-width: 992px) {
+      width: 150px;
+      height: 150px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__details {
+    margin-left: 32px;
+    width: 100%;
+  }
+
+  &__variationSelect {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 0 16px;
+    height: 40px;
+    margin-top: 24px;
+    width: -webkit-fill-available;
+
+    @media only screen and (max-width: 768px) {
+      margin-top: 12px;
+    }
+  }
+
+  &__counter {
+    margin: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    font-weight: bold;
+
+    & > span {
+      font-size: 0.8em;
+    }
+
+    & > button {
+      padding: 10px;
+      border-color: #e5e5e5;
+      font-size: 0.87em;
+    }
+
+    @media only screen and (max-width: 768px) {
+      margin: 16px 0;
+    }
+  }
+}
+
+.productDetails {
+  &__name {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media only screen and (max-width: 768px) {
+      font-family: "Nunito", sans-serif;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+
+    & > del {
+      color: #999999;
+      font-weight: normal;
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-family: "Nunito", sans-serif;
+      color: #f26522;
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 4px;
+    }
+  }
+}
+
+.productDescription {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
+  &__title {
+    margin: 1.5rem 0 0 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__desc {
+    font-weight: normal;
+  }
+
+  // &__viewMore {
+  //     cursor: pointer;
+  //     text-decoration: underline;
+  //     color: #0065ff;
+  // }
+}
+
+.shippingAddress {
+  border: thin solid #f2f2f2;
+  font-family: var(--font-nunito);
+
+  &__head {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: #f4f5f7;
+    font-size: 14px;
+
+    & span {
+      display: flex;
+      align-items: center;
+    }
+
+    & button {
+      padding: 0;
+      color: blue;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: normal;
+    }
+
+    &__modal {
+      min-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      @media only screen and (max-width: 480px) {
+        min-width: none;
+        padding: 0.25rem;
+
+        h3 {
+          font-size: 20px;
+        }
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 28px;
+      }
+
+      & > div {
+        &:nth-of-type(1) {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &:nth-last-of-type(1) {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  &__form {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    & h5 {
+      margin: 0 0 0.5rem 0;
+      font-size: 16px;
+    }
+
+    &__name {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &__summary {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      background: #f4f5f7;
+      font-size: 14px;
+
+      & > div {
+        display: flex;
+        justify-content: space-between;
+
+        &:nth-of-type(2) {
+          color: var(--color-yellow-200);
+          font-size: 1.25rem;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__submit {
+      padding: 60px 34px;
+    }
+  }
+}
+
+.paymentMethod {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      width: 1.5rem !important;
+      height: 1.5rem !important;
+    }
+  }
+}
+
+.summaryCard {
+  width: 100%;
+  max-width: 484px;
+  margin: 30px 0;
+
+  // position: relative;
+
+  @media only screen and (max-width: 992px) {
+    max-width: 50%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    min-width: 100%;
+    margin: 0;
+    padding-bottom: 0px;
+  }
+
+  &__wrapper {
+    padding: 20px;
+    background: #f4f5f7;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    @media only screen and (max-width: 768px) {
+      border-radius: 0;
+    }
+
+    & h3 {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__body {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    font-family: var(--font-nunito);
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+
+      & img {
+        width: 80px;
+        aspect-ratio: 1;
+      }
+
+      & > div {
+        &:nth-of-type(2) {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          & > span {
+            &:nth-of-type(1) {
+              font-weight: bold;
+            }
+
+            &:nth-of-type(2) {
+              font-size: 14px;
+            }
+
+            &:nth-of-type(3) {
+              color: #999;
+              font-size: 12px;
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__detail {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      & > div {
+        display: flex;
+        justify-content: space-between;
+
+        & span:nth-last-child(1) {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__total > div {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+  }
+
+  &__actions {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 768px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
+// Footer
+.footer {
+  padding: 32px 60px;
+  background: #fafbfc;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  &__menu {
+    display: flex;
+
+    @media only screen and (max-width: 768px) {
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  &__menuList {
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      padding-left: 30px;
+
+      &:before {
+        font-size: 20px;
+        content: "\2022";
+        color: #e6e6e6;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 16px;
+        position: relative;
+        left: -20px;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Nunito", sans-serif;
+    line-height: 20px;
+    color: #1a1a1a;
+  }
+
+  &__copyright {
+    font-size: 12px;
+    line-height: 20px;
+    color: #999999;
+
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+      margin-top: 32px;
+    }
+  }
+
+  &__logoWrapper {
+    position: relative;
+    top: 12px;
+
+    @media only screen and (max-width: 768px) {
+      margin: 10px auto 0px;
+    }
+  }
+
+  &__logo {
+    background: #ffffff;
+    /* Neutral / N3 */
+
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    height: 16px;
+    padding: 12px;
+    margin-left: 8px;
+  }
+}
+
+// SHOW HIDE
+.show-hide-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show-hide-text a {
+  order: 2;
+}
+
+.show-hide-text p {
+  position: relative;
+  overflow: hidden;
+  max-height: 60px; // The Height of 3 rows
+}
+
+.show-hide-text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; // 3 Rows of text
+  -webkit-box-orient: vertical;
+}
+
+.show-less {
+  display: none;
+}
+
+.show-less:target {
+  display: block;
+}
+
+.show-less:target ~ p {
+  display: block;
+  max-height: 100%;
+}
+
+.show-less:target + a {
+  display: none;
+}

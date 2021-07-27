@@ -15,6 +15,10 @@ const Dropdown = ({
 }) => {
   const node = useRef();
   const [isActive, setIsActive] = useState(false);
+  const [activeValue, setActiveValue] = useState({
+    name: placeholder,
+    value: null,
+  });
   const classNames = cn(
     styles.root,
     {
@@ -24,9 +28,8 @@ const Dropdown = ({
     className
   );
 
-  const handleOnChoosenOption = (value) => {
-    console.log(value, isActive);
-    placeholder = value;
+  const handleOnChoosenOption = (name, value) => {
+    setActiveValue({ name, value });
     setIsActive(false);
   };
 
@@ -42,9 +45,7 @@ const Dropdown = ({
   };
 
   useEffect(() => {
-    // add when mounted
     document.addEventListener("mousedown", handleClick);
-    // return function to be called when unmounted
     return () => {
       document.removeEventListener("mousedown", handleClick);
     };
@@ -52,17 +53,17 @@ const Dropdown = ({
 
   return (
     <div ref={node} className={classNames} {...rest}>
-      {label && <span>{label}</span>}
+      {label && <label>{label}</label>}
       <button
         aria-expanded="true"
         aria-haspopup="true"
         style={{
-          color: isActive ? "var(--color-black-500)" : null,
-          fontWeight: isActive ? "bold" : "normal",
+          color: activeValue.value ? "var(--color-black-500)" : null,
+          fontWeight: activeValue.value ? "bold" : "normal",
         }}
         onClick={() => setIsActive((prev) => !prev)}
       >
-        {placeholder}
+        {activeValue.name}
         <Chevron
           style={{ transform: isActive ? "rotate(-90deg)" : "rotate(90deg)" }}
         />
@@ -79,7 +80,9 @@ const Dropdown = ({
         {options.map((item, index) => {
           return (
             <li key={item?.id || index}>
-              <button onClick={() => handleOnChoosenOption(item.value)}>
+              <button
+                onClick={() => handleOnChoosenOption(item.name, item.value)}
+              >
                 {item.name}
               </button>
             </li>

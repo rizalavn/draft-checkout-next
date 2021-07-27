@@ -5,8 +5,13 @@
   background: var(--color-white-500);
   font-family: var(--font-nunito);
 
+  & label {
+    font-size: 14px;
+    font-weight: bold;
+  }
 
   & > button {
+    margin-top: 5px;
     width: 100%;
     padding: 9px 16px;
     display: flex;

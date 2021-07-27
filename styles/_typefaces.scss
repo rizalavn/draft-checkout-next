@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$FAMILIES: (
+  montserrat: #{'"Montserrat", sans-serif'},
+  nunito: #{'"Nunito", sans-serif'},
+);
+
+@mixin variants {
+  @each $key, $val in $FAMILIES {
+    #{"--font-" + $key}: #{$val};
+  }
+}

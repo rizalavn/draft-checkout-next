@@ -1,0 +1,28 @@
+@use "./styles/colors" as colors;
+@use "./styles/typefaces" as typefaces;
+@use "../components/layout/Default.scss" as *;
+
+:root {
+  // Global CSS Variables
+  @include typefaces.variants; // Represented in CSS Variables (e.g. "--color-[black|white|grey|yellow|red|blue]-[100-800]")
+  @include colors.palettes; // Represented in CSS Variables (e.g. "--font-[montserrat|nunito]")
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--color-black-500);
+  font-family: var(--font-montserrat);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  color: var(--color-black-500);
+  font-family: var(--font-montserrat);
+}
+
+svg {
+  width: 1em !important;
+  height: 1em !important;
+}

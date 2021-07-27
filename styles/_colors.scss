@@ -1,0 +1,37 @@
+$COLORS: (
+  black: (
+    500: #1a1a1a,
+  ),
+  white: (
+    500: #ffffff,
+  ),
+  grey: (
+    100: #999999,
+    200: #cccccc,
+    300: #dfe1e6,
+    400: #e6e6e6,
+    500: #eeeeee,
+    600: #f2f2f2,
+    700: #f4f5f7,
+    800: #fafbfc,
+  ),
+  yellow: (
+    200: #f26522,
+    500: #fdb814,
+    800: #feecd2,
+  ),
+  red: (
+    500: #ff4d4f,
+  ),
+  blue: (
+    500: #0065ff,
+  ),
+);
+
+@mixin palettes {
+  @each $colorname, $palette in $COLORS {
+    @each $key, $val in $palette {
+      #{"--color-" + $colorname + "-" + $key}: #{$val};
+    }
+  }
+}

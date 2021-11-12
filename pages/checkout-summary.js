@@ -6,11 +6,7 @@ import Layout from "../components/layout/Default";
 import { Button, RadioButton } from "../components/ui";
 import { Chevron, Wallet, OnlineBanking } from "../components/icons";
 
-import image2 from "../assets/image2.png";
-import image3 from "../assets/image3.png";
-import image4 from "../assets/image4.png";
-
-const IMGS = [image2, image3, image4];
+const IMGS = ["/assets/image2.png", "/assets/image3.png", "/assets/image4.png"];
 
 const DUMMY = [
   {

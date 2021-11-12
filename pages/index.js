@@ -303,7 +303,10 @@ export default function Home() {
               </div>
             </div>
             <div className="shippingAddress__form__submit">
-              <Button block={true} onClick={() => router.push("/summary")}>
+              <Button
+                block={true}
+                onClick={() => router.push("/checkout-summary")}
+              >
                 Choose Payment
               </Button>
             </div>
